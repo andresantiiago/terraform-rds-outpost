@@ -1,0 +1,37 @@
+tags:
+  outpost: true
+  region: sa-east-1
+  zone: sa-east-1a
+  env: development
+  
+vpc_id: vpc-0927fceea8d5cebe4
+subnet_id: subnet-00e9e9c2e49b3ecc6
+
+db_instances:
+  banco_1:
+    db_name: dbteste1
+    indentifier: dbteste1
+    engine: postgres
+    version: "14.10"
+    instance_class: db.m5.large
+    allocated_storage: 10
+    max_allocated_storage: 20
+    security_group:
+      postgresql:
+        rule: postgresql-tcp
+        cidr_block: 10.10.10.0/24
+      mysql:
+        rule: mysql-tcp
+        cidr_block: 10.10.11.0/24
+  banco_2:
+    db_name: dbteste2
+    indentifier: dbteste2
+    engine: mysql
+    version: "8.0.35"
+    instance_class: db.m5.large
+    allocated_storage: 10
+    max_allocated_storage: 20
+    security_group:
+      mysql:
+        rule: mysql-tcp
+        cidr_block: 10.0.0.0/8

@@ -1,0 +1,19 @@
+tags:
+  outpost: true
+  region: sa-east-1
+  zone: sa-east-1a
+  env: development
+
+
+vpc_id: 
+subnet_id: 
+
+db_instances:
+  banco_1:
+    indentifier: 
+    engine: 
+    version: 
+  banco_2:
+    indentifier: 
+    engine: 
+    version: 
